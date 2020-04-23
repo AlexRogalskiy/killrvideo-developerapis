@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<!-- ~ MVN Coordonates ~ -->
+	<!-- ~ MVN Coordinates ~ -->
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.datastax</groupId>
@@ -291,7 +291,7 @@
 				<artifactId>junit-jupiter-params</artifactId>
 				<version>${junit-jupiter.version}</version>
 			</dependency>
-			<!-- Cuncumber -->
+			<!-- Cucumber -->
 			<dependency>
             	<groupId>info.cukes</groupId>
             	<artifactId>cucumber-java</artifactId>

@@ -40,7 +40,7 @@ public abstract class AbstractGrpcHelper {
     * @param fieldName
     *      fieldName to evaluate
     * @param request
-    *      GRPC reauest
+    *      gRPC request
     * @param errorMessage
     *      concatenation of error messages
     * @return
@@ -82,12 +82,12 @@ public abstract class AbstractGrpcHelper {
     }
 
     /**
-     * Utility to validate Grpc Input.
+     * Utility to validate gRPC Input.
      *
      * @param streamObserver
      *      grpc observer
      * @param errorMessage
-     *      error mressage
+     *      error message
      * @param isValid
      *      validation of that
      * @return
@@ -128,6 +128,6 @@ public abstract class AbstractGrpcHelper {
      *      timestamp for starting
      */
     public void traceError(Logger logger, String method, Instant starts, Throwable t) {
-        logger.error("An error occured in {} after {}", method, Duration.between(starts, Instant.now()), t);
+        logger.error("An error occurred in {} after {}", method, Duration.between(starts, Instant.now()), t);
     }
 }

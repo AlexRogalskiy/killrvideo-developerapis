@@ -26,14 +26,14 @@ import killrvideo.comments.CommentsServiceOuterClass.GetVideoCommentsRequest;
 import killrvideo.comments.CommentsServiceOuterClass.GetVideoCommentsResponse;
 
 /**
- * Exposition of comment services with GPRC Technology & Protobuf Interface
+ * Exposition of comment services with gRPC & Protobuf Interface
  * 
  * @author DataStax evangelist team.
  */
 @Service
 public class CommentsGrpcService extends CommentsServiceImplBase {
     
-    /** Loger for that class. */
+    /** Logger for that class. */
     private static Logger LOGGER = LoggerFactory.getLogger(CommentsGrpcService.class);
   
     @Autowired

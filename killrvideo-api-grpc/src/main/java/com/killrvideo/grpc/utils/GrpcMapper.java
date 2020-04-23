@@ -10,7 +10,7 @@ import killrvideo.common.CommonTypes.TimeUuid;
 import killrvideo.common.CommonTypes.Uuid;
 
 /**
- * Convert Grpc Attribute to common types.
+ * Convert gRPC Attribute to common types.
  *
  * @author DataStax evangelist team.
  */

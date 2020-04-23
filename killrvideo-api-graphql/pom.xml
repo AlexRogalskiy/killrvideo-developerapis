@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<!-- ~ MVN Coordonates ~ -->
+	<!-- ~ MVN Coordinates ~ -->
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>killrvideo-api-graphql</artifactId>
@@ -89,29 +89,7 @@
     <!-- ~ BUILD                    ~ -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<build>
-		<plugins> 
-			
-			<!-- Add GRPC Sources -->
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>${build-helper-maven-plugin.version}</version>
-				<executions>
-					<execution>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-source</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>target/generated-sources/protobuf/java</source>
-								<source>target/generated-sources/protobuf/grpc-java</source>
-							</sources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			
+		<plugins>
 			 <!-- Spring Boot -->
             <plugin>
 				<groupId>org.springframework.boot</groupId>
