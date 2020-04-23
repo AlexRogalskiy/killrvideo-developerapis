@@ -8,38 +8,38 @@ import killrvideo.comments.CommentsServiceGrpc;
 import killrvideo.comments.CommentsServiceGrpc.CommentsServiceBlockingStub;
 
 /**
- * As Unit Test or cany consumer you may want USE the runing GRPC API.
+ * A Unit Test or consumer may want to USE the running gRPC API.
  *
  * @author DataStax Evangelist Team
  */
 public class KillrVideoGrpcClient {
     
-    /** Grpc Endpoint */
+    /** gRPC Endpoint */
     private ManagedChannel grpcEndPoint;
    
-    /** Clients for different services in GRPC. */
+    /** Clients for different services in gRPC. */
     public CommentsServiceBlockingStub commentServiceGrpcClient;
     
     /**
-     * Connection to GRPC Server.
+     * Connection to gRPC Server.
      * 
      * @param grpcServer
-     *      current grpc hostname
+     *      current gRPC hostname
      * @param grpcPort
-     *      current grpc portnumber
+     *      current gRPC portnumber
      */
     public KillrVideoGrpcClient(String grpcServer, int grpcPort) {
        this(ManagedChannelBuilder.forAddress(grpcServer, grpcPort).usePlaintext(true).build());
     }
     
     /**
-     * Extension point for your own GRPC channel.
+     * Extension point for your own gRPC channel.
      * 
-     * @param grpcEnpoint
-     *      current GRPC Channe
+     * @param grpcEndpoint
+     *      current gRPC Channel
      */
-    public KillrVideoGrpcClient(ManagedChannel grpcEnpoint) {
-        this.grpcEndPoint = grpcEnpoint;
+    public KillrVideoGrpcClient(ManagedChannel grpcEndpoint) {
+        this.grpcEndPoint = grpcEndpoint;
         initServiceClients();
     }
     
@@ -47,7 +47,7 @@ public class KillrVideoGrpcClient {
      * Init item
      */
     public void initServiceClients() {
-        Assert.notNull(grpcEndPoint, "GrpcEnpoint must be setup");
+        Assert.notNull(grpcEndPoint, "grpcEndpoint must be setup");
         commentServiceGrpcClient = CommentsServiceGrpc.newBlockingStub(grpcEndPoint);
     }
 

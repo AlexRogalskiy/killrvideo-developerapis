@@ -37,7 +37,7 @@ public class CommentGrpcHelper extends AbstractGrpcHelper {
      * Validate comment On video comment query.
      * 
      * @param request
-     *      current GRPC Request
+     *      current gRPC Request
      * @param streamObserver
      *      response async
      * @return
@@ -57,7 +57,7 @@ public class CommentGrpcHelper extends AbstractGrpcHelper {
      * Validate get video comment query.
      * 
      * @param request
-     *      current GRPC Request
+     *      current gRPC Request
      * @param streamObserver
      *      response async
      * @return
@@ -84,7 +84,7 @@ public class CommentGrpcHelper extends AbstractGrpcHelper {
      * Validate get user comment query.
      * 
      * @param request
-     *      current GRPC Request
+     *      current gRPC Request
      * @param streamObserver
      *      response async
      * @return
@@ -104,7 +104,7 @@ public class CommentGrpcHelper extends AbstractGrpcHelper {
      * Utility from exposition to Dse query.
      * 
      * @param grpcReq
-     *      grpc Request
+     *      gRPC Request
      * @return
      *      query bean for Dao
      */
@@ -156,7 +156,7 @@ public class CommentGrpcHelper extends AbstractGrpcHelper {
      * Utility from exposition to Dse query.
      * 
      * @param grpcReq
-     *      grpc Request
+     *      gRPC Request
      * @return
      *      query bean for Dao
      */

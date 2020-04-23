@@ -14,7 +14,7 @@ import io.grpc.ServerBuilder;
 import io.grpc.ServerServiceDefinition;
 
 /**
- * Startup a GRPC server on expected port and register all services.
+ * Startup a gRPC server on expected port and register all services.
  *
  * @author DataStax evangelist team.
  */
@@ -24,7 +24,7 @@ public class GrpcServer {
     /** Some logger. */
     private static final Logger LOGGER = LoggerFactory.getLogger(GrpcServer.class);
     
-    /** Listening Port for GRPC. */
+    /** Listening Port for gRPC. */
     @Value("${grpc.port: 8899}")
     private int grpcPort;
     
@@ -32,13 +32,13 @@ public class GrpcServer {
     private CommentsGrpcService commentService;
   
     /**
-     * GRPC Server to set up.
+     * gRPC Server to set up.
      */
     private Server server;
     
     @PostConstruct
     public void start() throws Exception {
-        LOGGER.info("Initializing Grpc Server...");
+        LOGGER.info("Initializing gRPC Server...");
         
         // Binding Services
         final ServerServiceDefinition commentService  = this.commentService.bindService();
@@ -50,19 +50,19 @@ public class GrpcServer {
     
             /**
              * Declare a shutdown hook otherwise the JVM
-             * cannot be stop since the Grpc server
+             * cannot be stop since the gRPC server
              * is listening on  a port forever
              */
             Runtime.getRuntime().addShutdownHook(new Thread() {
                 public void run() {
-                    LOGGER.info("Calling shutdown for GrpcServer");
+                    LOGGER.info("Calling shutdown for gRPC Server");
                     server.shutdown();
                 }
             });
 
         // Start Grpc listener
         server.start();
-        LOGGER.info("[OK] Grpc Server started on port: '{}'", grpcPort);
+        LOGGER.info("[OK] gRPC Server started on port: '{}'", grpcPort);
     }
 
     @PreDestroy

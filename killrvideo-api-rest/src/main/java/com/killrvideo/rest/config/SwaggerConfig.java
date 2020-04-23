@@ -57,7 +57,7 @@ public class SwaggerConfig {
     /**
      * Initialization of documentation
      *
-     * @return static infos
+     * @return static info
      */
     private ApiInfo apiInfo() {
         ApiInfoBuilder builder = new ApiInfoBuilder();
